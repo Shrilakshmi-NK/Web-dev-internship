@@ -1,0 +1,52 @@
+.ci{
+    border-color:rgba(25, 104, 137, 0.675);
+    width: 500px;
+    }
+.ci:hover{
+  width:600px;
+  border-color:rgba(142, 217, 250, 0.978);
+  border-radius: 10px;
+}
+.ci_1{
+      border-color:rgba(1, 167, 238, 0.904);
+      width: 500px;
+    }
+.ci_1:hover{
+  width:600px;
+  border-color:rgba(63, 129, 108, 0.978);
+  border-radius: 10px;
+}
+
+#cv_1{
+      border: 5px solid rgba(140, 28, 28, 0.323);
+      width: 500px;
+    }
+#cv_1:hover{
+  width:600px;
+  border-color:rgba(142, 217, 250, 0.978);
+  border-radius: 10px;
+}
+.cv_2{
+      border: 5px solid rgba(102, 82, 45, 0.675);
+      width: 500px;
+    }
+.cv_2:hover{
+  width:600px;
+  border-color:rgba(63, 129, 108, 0.978);
+  border-radius: 10px;
+}
+
+li a:visited {
+  color: orange;
+}
+
+header{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#submit-btn:hover{
+  background-color:brown;
+  color:bisque;
+}
+input:focus{
+  background-color:rgb(85, 240, 85);
+}
