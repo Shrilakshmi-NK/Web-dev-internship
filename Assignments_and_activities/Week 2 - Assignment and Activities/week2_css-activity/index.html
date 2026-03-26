@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Methods Comparison</title>
+
+    <!-- 2. INTERNAL CSS (lives inside <style> tag in <head>) -->
+    <style>
+        h1 {
+            color: navy;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .internal {
+            background-color: lightblue;
+            padding: 15px;
+            border: 2px solid blue;
+            margin: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
+    <!-- 3. EXTERNAL CSS (linked from separate file) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. INLINE CSS (style written directly inside the tag) -->
+    <h1 style="color: darkgreen; background-color: #e0ffe0; padding: 20px;">
+        CSS Styling Methods Comparison
+    </h1>
+
+    <div class="internal">
+        <h2>This box uses INTERNAL CSS</h2>
+        <p>I got this style from the &lt;style&gt; tag in the head.</p>
+    </div>
+
+    <div class="external">
+        <h2>This box uses EXTERNAL CSS</h2>
+        <p>This style comes from styles.css file - best for big websites!</p>
+    </div>
+
+    <div style="background-color: pink; padding: 20px; margin: 20px; border: 3px dashed purple;">
+        <h2>This box uses INLINE CSS</h2>
+        <p>Style is written inside the tag - quick but messy for many elements.</p>
+    </div>
+
+    <h2>Comparison Table: Inline vs Internal vs External CSS</h2>
+
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Where is it written?</th>
+            <th>Pros</th>
+            <th>Cons</th>
+            <th>Best used when...</th>
+        </tr>
+        <tr>
+            <td>Inline CSS</td>
+            <td>Inside the HTML tag (style="...")</td>
+            <td>Very quick for one change<br>Overrides other styles</td>
+            <td>Hard to maintain<br>Makes HTML messy<br>Cannot reuse styles</td>
+            <td>One-time small fix or testing</td>
+        </tr>
+        <tr>
+            <td>Internal CSS</td>
+            <td>Inside &lt;style&gt; tag in &lt;head&gt;</td>
+            <td>Keeps everything in one file<br>Easy for small pages<br>Can reuse styles on the page</td>
+            <td>Still mixes HTML & CSS<br>Not reusable across multiple pages</td>
+            <td>Small single-page projects or quick prototypes</td>
+        </tr>
+        <tr>
+            <td>External CSS</td>
+            <td>In a separate .css file (linked with &lt;link&gt;)</td>
+            <td>Clean HTML<br>Reusable across many pages<br>Easy to maintain & update<br>Best for large websites</td>
+            <td>Needs extra file<br>One more HTTP request (tiny delay)</td>
+            <td>Real websites, multiple pages, teams working together</td>
+        </tr>
+    </table>
+
+    <p style="text-align: center; font-style: italic; margin-top: 40px;">
+        Created by Shrilakshmi N K for CSS Methods Assignment
+    </p>
+
+</body>
+</html>

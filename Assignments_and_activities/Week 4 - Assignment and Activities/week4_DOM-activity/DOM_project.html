@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - Object Driven DOM</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Object-Driven DOM Update Project</h1>
+    <p>Click the buttons to change the student profile using JavaScript Objects</p>
+
+    <div class="card">
+        <img id="studentPhoto" src="https://via.placeholder.com/150" alt="Student Photo">
+        
+        <h1 id="studentName">Student Name</h1>
+        
+        <div class="info">
+            <p><strong>Age:</strong> <span id="studentAge">00</span></p>
+            <p><strong>Course:</strong> <span id="studentCourse">Course Name</span></p>
+            <p><strong>Grade:</strong> <span id="studentGrade">A</span></p>
+        </div>
+
+        <button onclick="showStudent(1)">Show Student 1</button>
+        <button onclick="showStudent(2)">Show Student 2</button>
+        <button onclick="showStudent(3)">Show Student 3</button>
+    </div>
+
+    <script>
+        // JavaScript Objects (Data)
+        const student1 = {
+            name: "Joe Patison",
+            age: 23,
+            course: "Artificial Intelligence & ML",
+            grade: "A+",
+            photo: "https://via.placeholder.com/150/4A90E2/FFFFFF?text=Aarav"
+        };
+
+        const student2 = {
+            name: "Lorren Hellman",
+            age: 25,
+            course: "Computer Science",
+            grade: "A",
+            photo: "https://via.placeholder.com/150/E74C3C/FFFFFF?text=Bhavya"
+        };
+
+        const student3 = {
+            name: "Chistopher Mage",
+            age: 24,
+            course: "Web Development",
+            grade: "B+",
+            photo: "https://via.placeholder.com/150/27AE60/FFFFFF?text=Chetan"
+        };
+
+        // Function to update DOM using object data
+        function showStudent(studentNumber) {
+            let student;
+
+            if (studentNumber === 1) student = student1;
+            else if (studentNumber === 2) student = student2;
+            else if (studentNumber === 3) student = student3;
+
+            // Update HTML content using object properties
+            document.getElementById("studentName").textContent = student.name;
+            document.getElementById("studentAge").textContent = student.age;
+            document.getElementById("studentCourse").textContent = student.course;
+            document.getElementById("studentGrade").textContent = student.grade;
+            document.getElementById("studentPhoto").src = student.photo;
+
+            console.log("Profile updated for:", student.name);
+        }
+
+        // Show first student when page loads
+        window.onload = function() {
+            showStudent(1);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page Mini Task</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f8ff;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            color: #2c5282;
+        }
+        .message {
+            font-size: 28px;
+            margin: 30px 0;
+            min-height: 80px;
+            color: #2b6cb0;
+        }
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .btn-greet {
+            background-color: #38a169;
+            color: white;
+        }
+        .btn-color {
+            background-color: #d69e2e;
+            color: white;
+        }
+        .btn-counter {
+            background-color: #3182ce;
+            color: white;
+        }
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #e53e3e;
+            margin: 20px 0;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Interactive Page!</h1>
+    
+    <div class="message" id="greeting">
+        Hello! Click the button below 👇
+    </div>
+
+    <!-- Button 1: Change Greeting -->
+    <button class="btn-greet" onclick="changeGreeting()">
+        Change Greeting
+    </button>
+
+    <!-- Button 2: Change Background Color -->
+    <button class="btn-color" onclick="changeColor()">
+        Random Background Color
+    </button>
+
+    <!-- Button 3: Counter -->
+    <h2>Click Counter</h2>
+    <div class="counter" id="count">0</div>
+    <button class="btn-counter" onclick="increaseCounter()">
+        Click Me!
+    </button>
+
+    <p>This page demonstrates basic JavaScript interactivity.<br>
+       All interactions are done using simple button click events.</p>
+
+    <script>
+        // JavaScript code starts here
+
+        // 1. Change Greeting Message
+        function changeGreeting() {
+            const messages = [
+                "Hello! How are you today? 😊",
+                "Welcome to my interactive page!",
+                "Have a wonderful day! 🌟",
+                "You are doing great! Keep going!",
+                "Hi there! Nice to meet you!"
+            ];
+            
+            // Pick a random message
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("greeting").textContent = randomMessage;
+        }
+
+        // 2. Change Background Color Randomly
+        function changeColor() {
+            const colors = ["#f0f8ff", "#e6f3ff", "#f0fff4", "#fff5f5", "#fdf2f8", "#f7fafc"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // 3. Live Counter
+        let count = 0;
+
+        function increaseCounter() {
+            count = count + 1;
+            document.getElementById("count").textContent = count;
+        }
+
+        // Bonus: Change greeting when page first loads
+        window.onload = function() {
+            document.getElementById("greeting").textContent = "Hello! I'm an Interactive Page!";
+        };
+    </script>
+
+</body>
+</html>

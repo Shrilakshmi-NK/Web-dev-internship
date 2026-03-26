@@ -1,0 +1,20 @@
+/* EXTERNAL CSS - this file styles elements across pages if needed */
+
+.external {
+    background-color: lightyellow;
+    padding: 15px;
+    border: 2px solid orange;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.external h2 {
+    color: darkorange;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
