@@ -10,7 +10,7 @@
 <h2>Superglobals</h2>
 
 <form method="post">
-  <h2>GET Form</h2>
+  <h2>POST Form</h2>
   <input type="text" name="input-3" placeholder="Username">
   <br>
   <input type="text" name="input-4" placeholder="email">
@@ -20,11 +20,10 @@
 </form>
 
 <?php
-if(isset($_POST["input-3"]) && isset($_POST["input-4"])){
-  echo $_GET["input-3"]."<br>";
-  echo $_GET["input-4"]."<br>";
+if (isset($_POST["input-3"]) && isset($_POST["input-4"])){
+  echo $_POST["input-3"]."<br>";
+  echo $_POST["input-4"]."<br>";
 } 
-
 
 ?>
 
